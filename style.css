@@ -1,0 +1,309 @@
+/* --- 1. RESET & VARIABLES (The Foundation) --- */
+:root {
+    /* CHANGE THESE VALUES TO MATCH YOUR PSD! 
+    */
+    --bg-color: #ffffff;        /* Background color */
+    --text-color: #1a1a1a;      /* Main text color */
+    --accent-color: #007bff;    /* Button/Link color */
+    --secondary-text: #666666;  /* Lighter text for descriptions */
+    scroll-behavior: smooth;
+    --font-main: 'Arial', sans-serif; /* Replace 'Arial' with your font name */
+}
+
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-main);
+    line-height: 1.6;
+}
+
+/* --- 2. LAYOUT UTILITIES --- */
+.container {
+    max-width: 1100px;
+    margin: 0 auto; /* Centers the content */
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --- 3. NAVIGATION BAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    position: fixed; /* Keeps menu at top while scrolling */
+    width: 100%;
+    top: 0;
+    background-color: var(--bg-color); 
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 4. HERO SECTION (The Top Part) --- */
+.hero {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    padding-top: 80px; /* Space for fixed navbar */
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero h1 {
+    font-size: 3.5rem; /* Big Headline size */
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.sub-text {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    margin-bottom: 30px;
+}
+
+.hero-image img {
+    max-width: 400px; /* Adjust based on your image size */
+    border-radius: 10px; /* Rounds the corners slightly */
+}
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn.primary {
+    background-color: var(--accent-color);
+    color: #fff; /* White text on button */
+}
+
+.btn.secondary {
+    border: 2px solid var(--text-color);
+    margin-left: 10px;
+}
+
+.btn.primary:hover {
+    opacity: 0.8;
+}
+
+.btn.secondary:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+/* --- 5. SECTIONS GENERAL --- */
+.section {
+    padding: 80px 0; /* Adds breathing room top and bottom */
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center; /* Centers the section titles */
+}
+
+/* --- 6. SERVICES SECTION (The Grid) --- */
+.services-grid {
+    display: grid;
+    /* This magical line creates responsive columns automatically */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #f9f9f9; /* Light grey background */
+    padding: 30px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05); /* Subtle shadow */
+}
+
+/* Hover Effect for Cards */
+.service-card:hover {
+    transform: translateY(-10px); /* Moves up slightly when hovered */
+    background: #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-top: 3px solid var(--accent-color);
+}
+
+.service-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+/* --- 7. CONTACT SECTION --- */
+.contact-intro {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto; /* Centers the form on the page */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 1rem;
+    background: #fafafa;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: #fff;
+}
+
+/* --- 8. FOOTER --- */
+.footer {
+    background: #111; /* Dark background for footer */
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.social-links {
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: #ccc;
+    margin: 0 15px;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+/* --- 9. MOBILE RESPONSIVENESS --- */
+
+/* Default: Hide Hamburger on Desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--text-color);
+}
+
+/* TABLET & MOBILE VIEW (Screens smaller than 768px) */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block; /* Show hamburger on mobile */
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; /* Hide middle bar when open */
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg); /* Turn into X */
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg); /* Turn into X */
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%; /* Hide menu off-screen by default */
+        top: 70px; /* Below the navbar */
+        gap: 0;
+        flex-direction: column; /* Stack links vertically */
+        background-color: var(--bg-color);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        left: 0; /* Slide menu in */
+    }
+
+    .nav-links li {
+        margin: 16px 0;
+    }
+
+    /* Stack Hero Section Vertically */
+    .hero {
+        flex-direction: column-reverse; /* Text below image */
+        height: auto;
+        padding-top: 100px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem; /* Smaller font for mobile */
+    }
+
+    .hero-image img {
+        max-width: 80%; /* Image smaller on mobile */
+        margin-bottom: 30px;
+    }
+}

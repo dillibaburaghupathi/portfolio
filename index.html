@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Dillibabu R</div> <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="hamburger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+        </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <p class="greeting">Hello 👋</p>
+            <h1>Crafting Digital <br> Masterpieces.</h1>
+            <p class="sub-text">
+                I am a Web Developer & Designer. I build accessible, 
+                pixel-perfect, and performant web experiences.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Hire Me</a>
+                <a href="#about" class="btn secondary">More about me</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/me.PNG" alt="Portrait of me"> 
+        </div>
+    </header>
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Hello! I'm a passionate developer dedicated to creating intuitive 
+                        and dynamic user experiences. With a strong foundation in design 
+                        and coding, I bridge the gap between aesthetics and functionality.
+                    </p>
+                    <p>
+                        My mission is to build websites that are not only visually 
+                        stunning but also accessible and easy to navigate for everyone.
+                    </p>
+                    <center>
+                    <a href="images/Dillibabu Resume.pdf" download="DilliBabu_Resume.pdf" class="btn secondary">Download Resume</a>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Web Development</h3>
+                    <p>Building responsive websites using HTML, CSS, JavaScript, and React.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Web Design</h3>
+                    <p>Designing modern, user-friendly interfaces in Figma.</p>
+                </div>
+                <div class="service-card">
+                    <h3>SEO Optimization</h3>
+                    <p>Improving site visibility and performance for search engines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Collaborate</h2>
+            <p class="contact-intro">Got a project? Send me a message.</p>
+            
+            <form class="contact-form" action="https://formspree.io/f/xwvpnozv" method="POST">
+    
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Your Name">
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="Your Email">
+    </div>
+    <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+    </div>
+    <button type="submit" class="btn primary">Send Message</button>
+</form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/dillibaburaghupathi/">LinkedIn</a>
+                <a href="https://github.com/rdbabu">GitHub</a>
+                <a href="mailto:dillibaburaghupathi@gmail.com?subject=Job Opportunity">Mail</a>
+            </div>
+            <p>&copy; 2026 Dillibabu R. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
